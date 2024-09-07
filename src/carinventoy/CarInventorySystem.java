@@ -21,6 +21,7 @@ public class CarInventorySystem {
         UtilityVehicle utilityVehicleOne = new UtilityVehicle("9090", "renault", "kangoo", 123456, false);
         System.out.println(utilityVehicleOne.getInfo());
 
+        //testing constructor and getInfo of UtiliVehicle
         UtilityVehicle utilityVehicleTwo = new UtilityVehicle("0909", "opel" , "utility" , 25000, true);
         System.out.println(utilityVehicleTwo.getInfo());
 
