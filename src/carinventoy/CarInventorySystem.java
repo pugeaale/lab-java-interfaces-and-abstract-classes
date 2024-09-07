@@ -14,5 +14,12 @@ public class CarInventorySystem {
         Sedan sedanOne = new Sedan("12345", "ford" ,"sport", 10000);
         // check the getInfo method
         System.out.println(sedanOne.getInfo());
+
+        //check and test constructor and getInfo
+        UtilityVehicle utilityVehicleOne = new UtilityVehicle("9090", "renault", "kangoo", 123456, false);
+        System.out.println(utilityVehicleOne.getInfo());
+
+        UtilityVehicle utilityVehicleTwo = new UtilityVehicle("0909", "opel" , "utility" , 25000, true);
+        System.out.println(utilityVehicleTwo.getInfo());
     }
 }
