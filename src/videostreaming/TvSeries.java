@@ -27,4 +27,9 @@ public class TvSeries extends Video {
         super(title, duration);
         setEpisodes(episodes);
     }
+
+    @Override
+    public String getInfo() {
+        return super.getInfo().replace("Video", "TV Series") + " - episodes : " + getEpisodes();
+    }
 }

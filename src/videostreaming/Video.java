@@ -44,6 +44,6 @@ public abstract class Video {
      * @return
      */
     public String getInfo() {
-        return "Video title : " + getTitle() + " - duration : " + getDuration();
+        return "[ Video ] - title : " + getTitle() + " - duration : " + getDuration();
     }
 }

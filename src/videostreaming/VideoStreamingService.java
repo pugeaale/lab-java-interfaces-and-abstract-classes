@@ -18,6 +18,6 @@ public class VideoStreamingService {
         System.out.println(prisonBreak.getInfo());
 
         Movie harryPotter = new Movie("harry potter", 500, 2.5);
-        System.out.println(harryPotter);
+        System.out.println(harryPotter.getInfo());
     }
 }

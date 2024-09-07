@@ -26,4 +26,9 @@ public class Movie extends Video {
         super(title, duration);
         setRating(rating);
     }
+
+    @Override
+    public String getInfo() {
+        return super.getInfo().replace("Video", "Movie") + " - rating : " + getRating();
+    }
 }
