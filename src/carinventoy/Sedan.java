@@ -20,6 +20,4 @@ public class Sedan extends Car {
     public String getInfo() {
         return super.getInfo().replace("Car", "Sedan");
     }
-
-
 }

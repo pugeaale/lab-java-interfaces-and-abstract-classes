@@ -8,6 +8,29 @@ package carinventoy;
  */
 public abstract class Car {
 
+    //a String representing the VIN number of the car
+    private String vinNumber;
+    //a String representing the make of the car
+    private String make;
+    //model: a String representing the model of the car
+    private String model;
+    //mileage: an int representing the mileage of the car
+    private int mileage;
+
+    /**
+     * Constructor to create a new car with all properties
+     * @param vinNumber representing the VIN number of the car
+     * @param make representing the make of the car
+     * @param model representing the model of the car
+     * @param mileage representing the mileage of the car
+     */
+    public Car(String vinNumber, String make, String model, int mileage) {
+        setVinNumber(vinNumber);
+        setMake(make);
+        setModel(model);
+        setMileage(mileage);
+    }
+
     public String getVinNumber() {
         return vinNumber;
     }
@@ -38,29 +61,6 @@ public abstract class Car {
 
     public void setMileage(int mileage) {
         this.mileage = mileage;
-    }
-
-    //a String representing the VIN number of the car
-    private String vinNumber;
-    //a String representing the make of the car
-    private String make;
-    //model: a String representing the model of the car
-    private String model;
-    //mileage: an int representing the mileage of the car
-    private int mileage;
-
-    /**
-     * Constructor to create a new car with all properties
-     * @param vinNumber representing the VIN number of the car
-     * @param make representing the make of the car
-     * @param model representing the model of the car
-     * @param mileage representing the mileage of the car
-     */
-    public Car(String vinNumber, String make, String model, int mileage) {
-        setVinNumber(vinNumber);
-        setMake(make);
-        setModel(model);
-        setMileage(mileage);
     }
 
     /**
