@@ -23,5 +23,8 @@ public class UtilityVehicle extends Car {
         this.fourWheelDrive = fourWheelDrive;
     }
 
-
+    @Override
+    public String getInfo() {
+        return super.getInfo().replace("Car", "Utility Vehicle") + " - has four whell drive :" + this.fourWheelDrive;
+    }
 }
