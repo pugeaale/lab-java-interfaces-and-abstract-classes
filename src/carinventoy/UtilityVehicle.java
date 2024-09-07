@@ -22,4 +22,6 @@ public class UtilityVehicle extends Car {
         super(vinNumber, make, model, mileage);
         this.fourWheelDrive = fourWheelDrive;
     }
+
+
 }
