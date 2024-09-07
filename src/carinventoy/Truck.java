@@ -22,4 +22,9 @@ public class Truck extends Car {
         super(vinNumber, make, model, mileage);
         this.towingCapacity = towingCapacity;
     }
+
+    @Override
+    public String getInfo() {
+        return super.getInfo().replace("Car", "Truck") + " - towing capacity : " + towingCapacity;
+    }
 }
