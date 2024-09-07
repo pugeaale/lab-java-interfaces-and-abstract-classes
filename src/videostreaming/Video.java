@@ -13,13 +13,29 @@ public abstract class Video {
     //duration: an int representing the duration of the video in minutes
     private int duration;
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
     /**
      * @param title
      * @param duration
      */
     public Video(String title, int duration) {
-        this.title = title;
-        this.duration = duration;
+        setTitle(title);
+        setDuration(duration);
     }
 
     /**
@@ -28,6 +44,6 @@ public abstract class Video {
      * @return
      */
     public String getInfo() {
-        return "Video title : " + this.title + " - duration : " + duration;
+        return "Video title : " + getTitle() + " - duration : " + getDuration();
     }
 }
