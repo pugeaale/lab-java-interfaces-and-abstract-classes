@@ -57,10 +57,10 @@ public abstract class Car {
      * @param mileage representing the mileage of the car
      */
     public Car(String vinNumber, String make, String model, int mileage) {
-        this.vinNumber = vinNumber;
-        this.make = make;
-        this.model = model;
-        this.mileage = mileage;
+        setVinNumber(vinNumber);
+        setMake(make);
+        setModel(model);
+        setMileage(mileage);
     }
 
     /**
@@ -68,7 +68,7 @@ public abstract class Car {
      * @return String containing all of the car's properties in a readable format
      */
     public String getInfo() {
-        return "Car n°" + vinNumber + " - make : " + make + " - model : "
-                + model + " - mileage : " + mileage;
+        return "Car n°" + getVinNumber() + " - make : " + getMake() + " - model : "
+                + getModel() + " - mileage : " + getMileage();
     }
 }
