@@ -7,6 +7,14 @@ package carinventoy;
  */
 public class Truck extends Car {
 
+    public double getTowingCapacity() {
+        return towingCapacity;
+    }
+
+    public void setTowingCapacity(double towingCapacity) {
+        this.towingCapacity = towingCapacity;
+    }
+
     //double that represents the towing capacity of the truck.
     private double towingCapacity;
 
@@ -20,11 +28,11 @@ public class Truck extends Car {
      */
     public Truck(String vinNumber, String make, String model, int mileage, double towingCapacity) {
         super(vinNumber, make, model, mileage);
-        this.towingCapacity = towingCapacity;
+        setTowingCapacity(towingCapacity);
     }
 
     @Override
     public String getInfo() {
-        return super.getInfo().replace("Car", "Truck") + " - towing capacity : " + towingCapacity;
+        return super.getInfo().replace("Car", "Truck") + " - towing capacity : " + getTowingCapacity();
     }
 }
