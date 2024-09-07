@@ -1,5 +1,7 @@
 package intlistinterface;
 
+import java.util.Arrays;
+
 /**
  * IntArrayList should store numbers in an array with a length of 10
  * by default. When the add method is called, you must first determine
@@ -34,9 +36,26 @@ public class IntArrayList implements IntList {
      */
     @Override
     public void add(int number) {
-        int count = getCount();
-        arrayList[count] = number;
-        setCount(++count);
+        int counter = getCount();
+        if (counter < arrayList.length) {
+            arrayList[counter] = number;
+            setCount(++counter);
+        } else {
+            System.out.println("updating size");
+            upgradeSizeList();
+            arrayList[counter] = number;
+            setCount(++counter);
+        }
+    }
+
+    private void upgradeSizeList() {
+        System.out.println("old size : " + arrayList.length);
+        arrayList = Arrays.copyOf(arrayList, getNewSize());
+        System.out.println(arrayList.length);
+    }
+
+    private int getNewSize() {
+        return (int) (arrayList.length * 1.5);
     }
 
     /**
