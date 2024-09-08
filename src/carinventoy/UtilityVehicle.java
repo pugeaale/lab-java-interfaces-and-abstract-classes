@@ -33,6 +33,6 @@ public class UtilityVehicle extends Car {
 
     @Override
     public String getInfo() {
-        return super.getInfo().replace("Car", "Utility Vehicle") + " - has four whell drive :" + isFourWheelDrive();
+        return super.getInfo().replace("Car", "Utility Vehicle") + " - four whell drive : " + isFourWheelDrive();
     }
 }

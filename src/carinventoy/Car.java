@@ -68,7 +68,7 @@ public abstract class Car {
      * @return String containing all of the car's properties in a readable format
      */
     public String getInfo() {
-        return "Car n°" + getVinNumber() + " - make : " + getMake() + " - model : "
+        return "[ Car ] vin Number : " + getVinNumber() + " - make : " + getMake() + " - model : "
                 + getModel() + " - mileage : " + getMileage();
     }
 }
