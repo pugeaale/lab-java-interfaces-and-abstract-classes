@@ -10,58 +10,17 @@ import java.util.Arrays;
  (For example, an array of length 10 would be increased to 20.)
  *
  */
-public class IntVector implements IntList {
+public class IntVector extends AbstractIntList {
 
-    private int[] vectorList;
     private static final int DEFAULT_SIZE = 20;
-    private int count;
 
-    public IntVector() {
-        vectorList = new int[DEFAULT_SIZE];
-        setCount(0);
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    /**
-     * @param number
-     */
     @Override
-    public void add(int number) {
-        int counter = getCount();
-        if (counter < vectorList.length) {
-            vectorList[counter] = number;
-            setCount(++counter);
-        } else {
-            System.out.println("updating size");
-            upgradeSizeList();
-            vectorList[counter] = number;
-            setCount(++counter);
-        }
+    public int getDefaultSize() {
+        return DEFAULT_SIZE;
     }
 
-    private void upgradeSizeList() {
-        System.out.println("old size : " + vectorList.length);
-        vectorList = Arrays.copyOf(vectorList, getNewSize());
-        System.out.println(vectorList.length);
+    public int getNewSize() {
+        return getSize() * 2;
     }
 
-    private int getNewSize() {
-        return vectorList.length * 2;
-    }
-
-    /**
-     * @param id
-     * @return
-     */
-    @Override
-    public int get(int id) {
-        return vectorList[id];
-    }
 }
