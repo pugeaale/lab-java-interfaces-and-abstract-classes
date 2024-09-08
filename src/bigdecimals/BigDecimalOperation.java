@@ -36,7 +36,7 @@ public class BigDecimalOperation {
      * For example, 4.2545 should return 4.25.
      */
     private static double getDouble(BigDecimal number) {
-        return number.setScale(2, RoundingMode.HALF_DOWN).doubleValue();
+        return number.setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
 
     /**
@@ -47,17 +47,6 @@ public class BigDecimalOperation {
      * @return the result of the operation with a BigDecimal
      */
     private static BigDecimal reverseAndRound(BigDecimal number) {
-        if( number.doubleValue() > 0 ) {
-            BigDecimal bb = new BigDecimal("-1");
-            bb = number.abs().multiply(bb);
-            return bb.setScale(1, RoundingMode.HALF_UP);
-        } else if (number.doubleValue() < 0) {
-            BigDecimal bb = new BigDecimal("1");
-            bb = number.abs().multiply(bb);
-            return bb.setScale(1, RoundingMode.HALF_UP);
-        } else {
-            return new BigDecimal("0");
-        }
-
+        return number.negate().setScale(1, RoundingMode.HALF_UP);
     }
 }
