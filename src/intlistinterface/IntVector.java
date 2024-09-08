@@ -24,7 +24,7 @@ public class IntVector extends AbstractIntList {
      * Return the new size,
      * @return IntVector list return a double size of the current size
      */
-    public int getNewSize() {
+    public int updateSizeList() {
         return getSize() * 2;
     }
 

@@ -30,9 +30,9 @@ public abstract class AbstractIntList implements IntList {
 
     /**
      * Get the new size of the array when the list is full
-     * @return the new size
+     * @return the new size of the array, not the number of elements in it
      */
-    public abstract int getNewSize();
+    public abstract int updateSizeList();
 
     /**
      * Get the number of elements added to the list
@@ -46,6 +46,10 @@ public abstract class AbstractIntList implements IntList {
         this.count = count;
     }
 
+    /**
+     * Get the size of the array, not the size of elements in it
+     * @return
+     */
     public int getSize() {
         return list.length;
     }
@@ -78,7 +82,8 @@ public abstract class AbstractIntList implements IntList {
      */
     private void upgradeSizeList() {
         System.out.println("array is full - count : " + getCount() + " - size : " + getSize());
-        list = Arrays.copyOf(list, getNewSize());
+        //create a new array with the new size and copy the elements of the old array
+        list = Arrays.copyOf(list, updateSizeList());
         System.out.println("array size changed - count : " + getCount() + " - size : " + getSize());
     }
 }

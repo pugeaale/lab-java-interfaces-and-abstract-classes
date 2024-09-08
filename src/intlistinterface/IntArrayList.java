@@ -24,7 +24,7 @@ public class IntArrayList extends AbstractIntList {
      * @return Int array list return a upgrade size by 50% of the current size
      */
     @Override
-    public int getNewSize() {
+    public int updateSizeList() {
         return (int) (getSize() * 1.5);
     }
 
