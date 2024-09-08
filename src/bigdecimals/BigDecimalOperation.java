@@ -8,7 +8,6 @@ import java.math.RoundingMode;
  * Using the BigDecimal documentation, create a method that accepts a BigDecimal and
  * returns a double of the BigDecimal
  * number rounded to the nearest hundredth. For example, 4.2545 should return 4.25.
- *
  * Using the BigDecimal documentation, create a method that accepts a BigDecimal,
  * reverses the sign (if the parameter is positive, the result should be negative
  * and vice versa), rounds the number to the nearest tenth and returns the result.
@@ -17,8 +16,10 @@ import java.math.RoundingMode;
 public class BigDecimalOperation {
     public static void main(String[] args) {
         BigDecimal numberOne = new BigDecimal("4.2545");
+        BigDecimal number2 = new BigDecimal("1.9999");
         // test the method getDouble
         System.out.println(getDouble(numberOne)); // expect 4.25
+        System.out.println(getDouble(number2)); // expect 2.0
 
         BigDecimal numberTwo = new BigDecimal("1.2345");
         BigDecimal numberTree = new BigDecimal("-45.67");
