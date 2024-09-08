@@ -10,6 +10,9 @@ package intlistinterface;
  */
 public class IntVector extends AbstractIntList {
 
+    /**
+     * the default vector int size
+     */
     private static final int DEFAULT_SIZE = 20;
 
     @Override
@@ -17,6 +20,10 @@ public class IntVector extends AbstractIntList {
         return DEFAULT_SIZE;
     }
 
+    /**
+     * Return the new size,
+     * @return IntVector list return a double size of the current size
+     */
     public int getNewSize() {
         return getSize() * 2;
     }

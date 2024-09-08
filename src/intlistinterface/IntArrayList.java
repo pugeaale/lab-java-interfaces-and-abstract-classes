@@ -9,61 +9,25 @@ import java.util.Arrays;
  * move all elements over to the new array and add the new element.
  * (For example, an array of length 10 would be increased to 15.)
  */
-public class IntArrayList implements IntList {
+public class IntArrayList extends AbstractIntList {
 
-    private int[] arrayList;
+    /**
+     * the default array int size
+     */
     private static final int DEFAULT_SIZE = 10;
-    private int count;
 
-    /**
-     *
-     */
-    public IntArrayList() {
-        arrayList = new int[DEFAULT_SIZE];
-        setCount(0);
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
+    @Override
+    public int getDefaultSize() {
+        return DEFAULT_SIZE;
     }
 
     /**
-     * @param number
+     * Return the new size,
+     * @return Int array list return a upgrade size by 50% of the current size
      */
     @Override
-    public void add(int number) {
-        int counter = getCount();
-        if (counter < arrayList.length) {
-            arrayList[counter] = number;
-            setCount(++counter);
-        } else {
-            System.out.println("updating size");
-            upgradeSizeList();
-            arrayList[counter] = number;
-            setCount(++counter);
-        }
+    public int getNewSize() {
+        return (int) (getSize() * 1.5);
     }
 
-    private void upgradeSizeList() {
-        System.out.println("old size : " + arrayList.length);
-        arrayList = Arrays.copyOf(arrayList, getNewSize());
-        System.out.println(arrayList.length);
-    }
-
-    private int getNewSize() {
-        return (int) (arrayList.length * 1.5);
-    }
-
-    /**
-     * @param id
-     * @return
-     */
-    @Override
-    public int get(int id) {
-        return arrayList[id];
-    }
 }
