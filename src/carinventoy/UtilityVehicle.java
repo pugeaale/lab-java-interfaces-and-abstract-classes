@@ -12,11 +12,11 @@ public class UtilityVehicle extends Car {
 
     /**
      * Constructor with all utility vehicle properties
-     * @param vinNumber
-     * @param make
-     * @param model
-     * @param mileage
-     * @param fourWheelDrive
+     * @param vinNumber vinNumber
+     * @param make make
+     * @param model model
+     * @param mileage mileage
+     * @param fourWheelDrive fourWheelDrive
      */
     public UtilityVehicle(String vinNumber, String make, String model, int mileage, boolean fourWheelDrive) {
         super(vinNumber, make, model, mileage);
