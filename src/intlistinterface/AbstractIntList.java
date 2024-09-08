@@ -63,7 +63,7 @@ public abstract class AbstractIntList implements IntList {
     /**
      *
      * @param id the id of the element
-     * @return
+     * @return the value of the id array
      */
     @Override
     public int get(int id) throws IllegalArgumentException {
