@@ -1,7 +1,5 @@
 package intlistinterface;
 
-import java.util.Arrays;
-
 /**
  * IntArrayList should store numbers in an array with a length of 10
  * by default. When the add method is called, you must first determine
