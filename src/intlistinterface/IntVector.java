@@ -1,8 +1,6 @@
 package intlistinterface;
 
 
-import java.util.Arrays;
-
 /** IntVector should store numbers in an array with a length of 20 by default.
  When the add method is called, you must first determine if the array is full.
  If it is, create a new array that is double the size of the current array,
