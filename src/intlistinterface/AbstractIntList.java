@@ -2,6 +2,16 @@ package intlistinterface;
 
 import java.util.Arrays;
 
+/**
+ * Abstract List is created to eliminate duplicate codes in IntArrayList and IntVector
+ * Both have to implement methods to getDefaultSize and updateSizeList methods.
+ * AbstractList manage the list of elements with the method add and get
+ * getSize return the size of the array allocated in memory
+ * getCount return the number of elements added to the list
+ * If you use get with an id incorrect, greater than the size of the array
+ * or < 0 or if the id is greater or equal to the counter of elements, an exception
+ * will be thrown
+ */
 public abstract class AbstractIntList implements IntList {
 
     /**
@@ -67,7 +77,9 @@ public abstract class AbstractIntList implements IntList {
     /**
      *
      * @param id the id of the element
-     * @return the value of the id array
+     * @return the value of the element
+     * @throws IllegalArgumentException if id is the index is out off bounds or
+     * if there is no element added to the id
      */
     @Override
     public int get(int id) throws IllegalArgumentException {
@@ -81,9 +93,7 @@ public abstract class AbstractIntList implements IntList {
      * The new given size is given with the implementation of getNewSize
      */
     private void upgradeSizeList() {
-        System.out.println("array is full - count : " + getCount() + " - size : " + getSize());
         //create a new array with the new size and copy the elements of the old array
         list = Arrays.copyOf(list, updateSizeList());
-        System.out.println("array size changed - count : " + getCount() + " - size : " + getSize());
     }
 }

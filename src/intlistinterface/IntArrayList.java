@@ -21,7 +21,7 @@ public class IntArrayList extends AbstractIntList {
 
     /**
      * Return the new size,
-     * @return Int array list return a upgrade size by 50% of the current size
+     * @return Int array list return an upgrade size by 50% of the current size
      */
     @Override
     public int updateSizeList() {
